@@ -37,8 +37,7 @@ fi
 
 #### Screwup function
 function screwup {
-	echo "You Screwed up somewhere, try again."
-	pause 
+	echo "You Screwed up somewhere, try again." 
 	clear
 }
 
@@ -56,12 +55,28 @@ function Update {
 
 ######## HDMI
 function hdmi {
-sed -i 's/display_default_lcd=1/display_default_lcd=0/' /boot/config.txt
+sed -i 's/display_default_lcd=1/display_default_lcd=0/' /home/mint/config.txt
+echo "For this setting to take affect you need to reboot. Would you like to reboot now? (Y/N)"
+read reboot
+if [[ $reboot = Y || $reboot = y ]] ; then
+	echo "Rebooting."
+	sleep 3
+	init 6
+fi
+
 }
 
 ######## LCD
 function lcd {
-sed -i 's/display_default_lcd=0/display_default_lcd=1/' /boot/config.txt
+sed -i 's/display_default_lcd=0/display_default_lcd=1/' /home/mint/config.txt
+echo "For this setting to take affect you need to reboot. Would you like to reboot now? (Y/N)"
+read reboot
+if [[ $reboot = Y || $reboot = y ]] ; then
+	echo "Rebooting."
+	sleep 3
+	init 6
+fi	
+	
 }
 
 ######## On
