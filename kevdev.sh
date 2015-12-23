@@ -56,12 +56,12 @@ function Update {
 
 ######## HDMI
 function hdmi {
-sed -i 's/display_default_lcd=1/display_default_lcd=0/' /home/mint/config.txt
+sed -i 's/display_default_lcd=1/display_default_lcd=0/' /boot/config.txt
 }
 
 ######## LCD
 function lcd {
-sed -i 's/display_default_lcd=0/display_default_lcd=1/' /home/mint/config.txt
+sed -i 's/display_default_lcd=0/display_default_lcd=1/' /boot/config.txt
 }
 
 ######## On
