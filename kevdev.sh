@@ -55,7 +55,7 @@ function Update {
 
 ######## HDMI
 function hdmi {
-sed -i 's/display_default_lcd=1/display_default_lcd=0/' /home/mint/config.txt
+sed -i 's/display_default_lcd=1/display_default_lcd=0/' /boot/config.txt
 echo "For this setting to take affect you need to reboot. Would you like to reboot now? (Y/N)"
 read reboot
 if [[ $reboot = Y || $reboot = y ]] ; then
@@ -68,7 +68,7 @@ fi
 
 ######## LCD
 function lcd {
-sed -i 's/display_default_lcd=0/display_default_lcd=1/' /home/mint/config.txt
+sed -i 's/display_default_lcd=0/display_default_lcd=1/' /boot/config.txt
 echo "For this setting to take affect you need to reboot. Would you like to reboot now? (Y/N)"
 read reboot
 if [[ $reboot = Y || $reboot = y ]] ; then
